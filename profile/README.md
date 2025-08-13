@@ -37,8 +37,13 @@ I am trying my best to stay as unique as possible in the hobby OS space, altough
 - **multi-architecture**:
 SafaOS is a multi-architecture OS unlike most hobby OSes, supporting both `x86_64` and `aarch64`
 
+- **100% written in rust**: You can see the libc is written in Zig but it is more of a side project, and it isn't used anywhere in the final OS Image for now, if it will ever be, I'll rewrite it in rust, I relay on the safa-api and rust's standard library for writing userspace applications for now.
+
 - **rust first design**:
-it isn't unix-like and therefore allows for a more rust-like design, for example syscall arguments don't relay on null termination and expect a length, pointer arguments has references' requirements, also the rust standard library doesn't relay on a libc internally but rather the `safa-api` which is written in 100% rust.
+It isn't unix-like and therefore allows for a more rust-like design, for example syscall arguments don't relay on null termination and expect a length, pointer arguments has references' requirements, also the rust standard library doesn't relay on a libc internally but rather the `safa-api` which is written in 100% rust.
+
+### Features
+See a more detailed overview of features [here](https://github.com/SafaOS/SafaOS/tree/main/FEATURES.md).
 
 ### Architectures
 - AArch64: Only tested `qemu-virt` but it should work on any machine with: GICV3, a GICITS, a generic timer, PCIe(optional), and UEFI
